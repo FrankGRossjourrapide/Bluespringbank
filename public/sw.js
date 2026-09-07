@@ -2,7 +2,7 @@ const CACHE_NAME = 'blue-bank-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  // '/vite.svg',
+  '/vite.svg',
 ];
 
 // Install event - cache assets
