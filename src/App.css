@@ -1,0 +1,224 @@
+/* Responsive Typography System */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Responsive Form Fields and Touch Targets */
+input,
+textarea,
+select,
+button {
+  min-height: 44px; /* Standard touch target */
+  font-size: 16px; /* Prevents iOS zoom on focus */
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  input,
+  textarea,
+  select,
+  button {
+    min-height: 40px;
+  }
+}
+
+/* Button Interactions */
+button {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Input Focus Styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Landscape Mode Optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  html {
+    font-size: 13px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.25rem 0;
+  }
+  
+  p {
+    margin: 0.25rem 0;
+  }
+  
+  input,
+  textarea,
+  button {
+    padding: 0.5rem 0.75rem;
+    min-height: 36px;
+  }
+}
+
+/* Tablet Specific (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Desktop/Large Screens (1025px+) */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Safe Area Support for Notched Devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0, env(safe-area-inset-left));
+    padding-right: max(0, env(safe-area-inset-right));
+  }
+  
+  main,
+  [role="main"] {
+    padding-top: max(0, env(safe-area-inset-top));
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: rgba(30, 58, 138, 0.2);
+  color: #1e3a8a;
+}
+
+/* Image Responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video Responsiveness */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Print Styles */
+@media print {
+  .no-print,
+  .hidden:printer {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  input,
+  textarea,
+  select,
+  button {
+    border-width: 2px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  input,
+  textarea,
+  select {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-color: #4b5563;
+  }
+}
+
+/* Flex Utilities */
+.flex-2 {
+  flex: 2 1 0%;
+}

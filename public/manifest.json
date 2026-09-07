@@ -1,0 +1,72 @@
+{
+  "name": "Blue Spring Capital Bank",
+  "short_name": "Blue Bank",
+  "description": "Secure online banking platform for all your financial needs",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/vite.svg",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["finance", "banking"],
+  "shortcuts": [
+    {
+      "name": "Transfer",
+      "short_name": "Transfer",
+      "description": "Send money to your contacts",
+      "url": "/?shortcut=transfer",
+      "icons": [
+        {
+          "src": "/vite.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Deposit",
+      "short_name": "Deposit",
+      "description": "Make a deposit",
+      "url": "/?shortcut=deposit",
+      "icons": [
+        {
+          "src": "/vite.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
